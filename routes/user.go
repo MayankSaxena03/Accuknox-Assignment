@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/MayamkSaxena03/AccuknoxAssignment/controllers"
+	"github.com/MayamkSaxena03/Accuknox/controllers"
 	"github.com/gorilla/mux"
 )
 

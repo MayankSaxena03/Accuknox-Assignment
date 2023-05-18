@@ -19,7 +19,7 @@ type NoteDataRequest struct {
 }
 
 type AllNotes struct {
-	ID   primitive.ObjectID `json:"_id,omitempty" bson:"_id,omitempty"`
+	ID   primitive.ObjectID `json:"id,omitempty" bson:"_id,omitempty"`
 	Note string             `json:"note,omitempty" bson:"note,omitempty"`
 }
 
