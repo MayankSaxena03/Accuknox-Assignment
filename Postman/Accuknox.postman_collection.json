@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "491632cd-3159-40ac-824e-4e40ce549505",
+		"name": "Accuknox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27254018"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Mayank Saxena\",\r\n    \"email\":\"saxenamayank0303@gmail.com\",\r\n    \"password\":\"test\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"saxenamayank0303@gmail.com\",\r\n    \"password\":\"test\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Note",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sid\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI2NDY2MGNjODg5YjBkMjI1MjM0YjY2MTQiLCJleHAiOjE2ODUwMTUwMjF9.aLUZph35QPhG9e6awSH7lI4wb-CawZDGB3AH0Y2jA8o\",\r\n    \"note\":\"Hello, This is a note!\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Notes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sid\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI2NDY2MTEwNmQzODJlZTE4Yzk3NzJhNWYiLCJleHAiOjE2ODUwMTU0NjV9.bVmwSwTi5w9tUlliVoBw4oETxfWMXft_9rgnUuPX5M0\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Note",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sid\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySUQiOiI2NDY2MGNjODg5YjBkMjI1MjM0YjY2MTQiLCJleHAiOjE2ODUwMTU2MjR9.PbgFG92biqL6SAecKRyTvRHd56Vs1nWiaQ2EtUUMqRw\",\r\n    \"id\": \"64660fd9de0fc921a42d63f8\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

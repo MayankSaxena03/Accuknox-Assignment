@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  mongo:
+    container_name: mongo
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - dbnet
+
+  myapp:
+    container_name: myapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - mongo
+    networks:
+      - dbnet
+
+volumes:
+  mongo_data:
+
+networks:
+  dbnet:
+    driver: bridge
